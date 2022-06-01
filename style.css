@@ -1,0 +1,40 @@
+body {
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    background-color: lavender;
+}
+main {
+    padding: 10px 200px;
+
+}
+a {
+    color: hotpink;
+}
+.menu-link{
+    margin: 20px;
+}
+
+pre {
+    font-family: monospace;
+    margin: 0;
+}
+
+.inga-and-goose{
+    display: flex;
+    flex-direction: row;
+}
+h1{
+    font-family: "Courier New", serif;
+}
+
+h2{
+    color: #222222;
+}
+
+.foo {
+    background-color: #b3b3db;
+    font-family: "Comic Sans MS", serif;
+    padding: 10px 0;
+    text-align: center;
+}
