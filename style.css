@@ -38,3 +38,20 @@ h2{
     padding: 10px 0;
     text-align: center;
 }
+
+h4{
+    color: purple;
+    text-align: left;
+    font-style: italic;
+    font-family: Georgia, serif;
+}
+
+.nav{
+    display: inline-block;
+    margin-right: 4px;
+        }
+.string {
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-style: bold;
+    }
