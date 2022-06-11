@@ -17,39 +17,75 @@
         <main>
             <h2>About me</h2>
             <div class="inga-and-goose">
-                <div style="flex: 1 0 auto"><img src ="inga.jpg" width="200px"  />  </div>
+                <div style="flex: 1 0 auto"><img src ="./images/inga.jpg" width="200px"  />  </div>
                 <div style="flex: 1 0 auto">
-<pre>░░░░░░░░░░░░░░░░░░░░
-░░░░░ЗАПУСКАЕМ░░░░░░░
-░ГУСЯ░▄▀▀▀▄░РАБОТЯГИ░░
-▄███▀░◐░░░▌░░░░░░░░░
-░░░░▌░░░░░▐░░░░░░░░░
-░░░░▐░░░░░▐░░░░░░░░░
-░░░░▌░░░░░▐▄▄░░░░░░░
-░░░░▌░░░░▄▀▒▒▀▀▀▀▄
-░░░▐░░░░▐▒▒▒▒▒▒▒▒▀▀▄
-░░░▐░░░░▐▄▒▒▒▒▒▒▒▒▒▒▀▄
-░░░░▀▄░░░░▀▄▒▒▒▒▒▒▒▒▒▒▀▄
-░░░░░░▀▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▀▄
-░░░░░░░░░░░▌▌░▌▌░░░░░
-░░░░░░░░░░░▌▌░▌▌░░░░░
-░░░░░░░░░▄▄▌▌▄▌▌░░░░░</pre>
+                    <pre>
+                    ░░░░░░░░░░░░░░░░░░░░
+                    ░░░░░ЗАПУСКАЕМ░░░░░░░
+                    ░ГУСЯ░▄▀▀▀▄░РАБОТЯГИ░░
+                    ▄███▀░◐░░░▌░░░░░░░░░
+                    ░░░░▌░░░░░▐░░░░░░░░░
+                    ░░░░▐░░░░░▐░░░░░░░░░
+                    ░░░░▌░░░░░▐▄▄░░░░░░░
+                    ░░░░▌░░░░▄▀▒▒▀▀▀▀▄
+                    ░░░▐░░░░▐▒▒▒▒▒▒▒▒▀▀▄
+                    ░░░▐░░░░▐▄▒▒▒▒▒▒▒▒▒▒▀▄
+                    ░░░░▀▄░░░░▀▄▒▒▒▒▒▒▒▒▒▒▀▄
+                    ░░░░░░▀▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▀▄
+                    ░░░░░░░░░░░▌▌░▌▌░░░░░
+                    ░░░░░░░░░░░▌▌░▌▌░░░░░
+                    ░░░░░░░░░▄▄▌▌▄▌▌░░░░░</pre>
                 </div>
+            </div>
+        <p>Hello, I'm Inga  Ezhova (probably, you already know it).  
+        <p>Right now I'm first year bachelor student at Innopolis University. I can't even explain how happy I am that I study there. </p>
+        <p style="margin-block-start: 0;"><u>What can I say about me?</u></p>
+        <ul style="margin-block-start: 0;">
+            <li>I'm from Tomsk.</li>
+            <li>I like to drink tea and to adore geese.</li>
+            <li>I was awarded as "chelovek-orchestr" because of my activity. </li>
+            </ul>
+        <p>And no, purple is not my favourite color(just in case)</p>
 
-</div>
-<p>Hello, I'm Inga  Ezhova (probably, you already know it).  
-<p>Right now I'm first year bachelor student at Innopolis University. I can't even explain how happy I am that I study there. </p>
-<p style="margin-block-start: 0;"><u>What can I say about me?</u></p>
-<ul style="margin-block-start: 0;">
-    <li>I'm from Tomsk.</li>
-    <li>I like to drink tea and to adore geese.</li>
-    <li>I was awarded as "chelovek-orchestr" because of my activity. </li>
-    </ul>
-<p>And no, purple is not my favourite color(just in case)</p>
-
+            <container style="display: flex, flex-direction: column, justify-content: space-around">
+                <button id="getJsonPH" class="custom-btn btn-2">Lets create json place holde</button>
+                <p id="part1"></p><p id="part2"></p>
+            </container>
+        
+            
         </main>
         <footer class="foo">
             Ingapolis: Made by Inga Ezhova :)
           </footer>
+        
+        
+        <script>
+            const getJsonPH = document.getElementById('getJsonPH');
+            urlForJPH = "https://jsonplaceholder.typicode.com/posts/";
+            const part1 = document.getElementById('part1');
+
+
+            function fetchJPH() {
+                return fetch(urlForJPH + Math.floor(Math.random() * (100 - 0 + 1) + 0).toString()).then(r => r.json());
+
+            }
+
+            function consoleJPH(jph){
+                const _jph = jph;
+                part1.textContent = "Title: " + _jph.title;
+                part2.textContent = "Body: " + _jph.body;
+            }
+
+
+            getJsonPH.addEventListener('click', async function (e) {
+                part1.textContent = "Loading...";
+                part2.textContent = '';
+                const JPH = await fetchJPH();
+                consoleJPH(JPH);
+            });
+        
+        </script>
+        
+        
     </body>
 </html>
