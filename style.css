@@ -3,10 +3,10 @@ body {
     line-height: 22px;
     color: #000000;
     background-color: lavender;
+    padding-top: 4.5rem;
 }
 main {
     padding: 10px 200px;
-
 }
 a {
     color: hotpink;
@@ -24,25 +24,22 @@ pre {
     display: flex;
     flex-direction: row;
 }
-h1{
-    font-family: "Courier New", serif;
-}
-
 h2{
+    font-family: "Courier New", serif;
     color: #222222;
+    font-style: oblique;
+    font-weight: bold;
 }
-
-.foo {
-    background-color: #b3b3db;
-    font-family: "Comic Sans MS", serif;
-    padding: 10px 0;
-    text-align: center;
+h3{
+    text-align: left;
+    font-family: "Apple LiGothic";
+    font-weight: revert;
+    color: blueviolet;
 }
 
 h4{
     color: purple;
-    text-align: left;
-    font-style: italic;
+    text-align: center;
     font-family: Georgia, serif;
 }
 
@@ -53,12 +50,10 @@ h4{
 .string {
     text-align: center;
     font-family: Verdana, sans-serif;
-    font-style: bold;
+    font-weight: bold;
     }
 
 .custom-btn {
-  width: 250px;
-  height: 40px;
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
@@ -89,4 +84,8 @@ h4{
               -4px -4px 6px 0 rgba(116, 125, 136, .5), 
     inset -4px -4px 6px 0 rgba(255,255,255,.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.bg-col{
+    background-color: #b3b3db;
 }

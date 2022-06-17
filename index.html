@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Inga's website</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
-            <h1>Inga Dmitrievna Ezhova</h1>
-            <nav>
-                <a class="menu-link" href="index.html">About Me</a>
-                <a class="menu-link" href="photos.html">Photos</a>
-                <a class="menu-link" href="portfolio.html">Portfolio</a>
-                <a class="menu-link" href="contact.html">Contact Me</a>
-            </nav>
-        </header>
-        <main>
-            <h2>About me</h2>
-            <div class="inga-and-goose">
-                <div style="flex: 1 0 auto"><img src ="./images/inga.jpg" width="200px"  />  </div>
-                <div style="flex: 1 0 auto">
+    <nav class="navbar navbar-expand-md fixed-top bg-col">
+        <div class="container-fluid">
+            <span class="navbar-brand" style="font-family:'Luminari'">Inga Dmitrievna Ezhova</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-muted" aria-current="page" href="index.html">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-muted" aria-current="page" href="photos.html">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-muted" aria-current="page" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-muted" aria-current="page" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <main class="container">
+            <h2> - About me -</h2>
+
+            <div class="container">
+            <div class="row">
+                <div class="col-auto">
+                    <img src ="./images/inga.jpg" width="250px"/>
+                </div>
+                <div class="col">
                     <pre>
                     ░░░░░░░░░░░░░░░░░░░░
                     ░░░░░ЗАПУСКАЕМ░░░░░░░
@@ -36,7 +59,12 @@
                     ░░░░░░░░░░░▌▌░▌▌░░░░░
                     ░░░░░░░░░▄▄▌▌▄▌▌░░░░░</pre>
                 </div>
+                <div class="col">
+                    <img src ="./images/inga10.jpg" width="250px"/>
+                </div>
             </div>
+            </div>
+            <br>
         <p>Hello, I'm Inga  Ezhova (probably, you already know it).  
         <p>Right now I'm first year bachelor student at Innopolis University. I can't even explain how happy I am that I study there. </p>
         <p style="margin-block-start: 0;"><u>What can I say about me?</u></p>
@@ -47,45 +75,18 @@
             </ul>
         <p>And no, purple is not my favourite color(just in case)</p>
 
-            <container style="display: flex, flex-direction: column, justify-content: space-around">
-                <button id="getJsonPH" class="custom-btn btn-2">Lets create json place holde</button>
+                <button id="getJsonPH" class="custom-btn btn-2">Let's create json place holder</button>
+            <span class="text-muted", style="font-family: Monaco; margin-left: 50px">
+                P.S.: This button I made for my homework, so don't mind it.</span>
                 <p id="part1"></p><p id="part2"></p>
-            </container>
-        
-            
         </main>
-        <footer class="foo">
-            Ingapolis: Made by Inga Ezhova :)
-          </footer>
-        
-        
-        <script>
-            const getDogImg = document.getElementById('getJsonPH');
-            urlForJPH = "https://jsonplaceholder.typicode.com/posts/";
-            const part1 = document.getElementById('part1');
-
-
-            function fetchJPH() {
-                return fetch(urlForJPH + Math.floor(Math.random() * (100 - 0 + 1) + 0).toString()).then(r => r.json());
-
-            }
-
-            function consoleJPH(jph){
-                const _jph = jph;
-                part1.textContent = "Title: " + _jph.title;
-                part2.textContent = "Body: " + _jph.body;
-            }
-
-
-            getDogImg.addEventListener('click', async function (e) {
-                part1.textContent = "Loading...";
-                part2.textContent = '';
-                const JPH = await fetchJPH();
-                consoleJPH(JPH);
-            });
-        
-        </script>
-        
-        
+    <footer class="d-flex flex-wrap justify-center py-3 my-4 border-top bg-col">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <span class="mb-3 mb-md-0 text-center" style="font-family: 'Comic Sans MS'">Ingapolis: Made by Inga Ezhova :)</span>
+            </div>
+        </div>
+    </footer>
+    <script src="bundle.js"></script>>
     </body>
 </html>
