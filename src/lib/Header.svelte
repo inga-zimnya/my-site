@@ -1,5 +1,4 @@
 <script>
-    import {Link} from "svelte-routing";
 </script>
 
 <nav class="navbar navbar-expand-md fixed-top bg-col">
@@ -11,16 +10,16 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <Link class="nav-link active text-muted" aria-current="page" to="/">About me</Link>
+                    <a class="nav-link active text-muted" aria-current="page" href="/">About me</a>
                 </li>
                 <li class="nav-item">
-                    <Link class="nav-link active text-muted" aria-current="page" to="photos">Photos</Link>
+                    <a class="nav-link active text-muted" aria-current="page" href="photos">Photos</a>
                 </li>
                 <li class="nav-item">
-                    <Link class="nav-link active text-muted" aria-current="page" to="portfolio">Portfolio</Link>
+                    <a class="nav-link active text-muted" aria-current="page" href="portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <Link class="nav-link active text-muted" aria-current="page" to="contact">Contact Me</Link>
+                    <a class="nav-link active text-muted" aria-current="page" href="contact">Contact Me</a>
                 </li>
             </ul>
         </div>
